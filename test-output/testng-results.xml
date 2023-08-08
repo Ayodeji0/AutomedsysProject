@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-08T19:24:52 WAT" name="Default suite" finished-at="2023-08-08T19:25:15 WAT" duration-ms="22281">
+    <groups>
+    </groups>
+    <test started-at="2023-08-08T19:24:52 WAT" name="Default test" finished-at="2023-08-08T19:25:15 WAT" duration-ms="22281">
+      <class name="com.Automedsys.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.Automedsys.testcases.LoginPageTest@71d44a3]" started-at="2023-08-08T19:24:53 WAT" name="setup" finished-at="2023-08-08T19:25:14 WAT" duration-ms="21410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Login()[pri:0, instance:com.Automedsys.testcases.LoginPageTest@71d44a3]" started-at="2023-08-08T19:25:14 WAT" name="Login" finished-at="2023-08-08T19:25:15 WAT" duration-ms="662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Automedsys.testcases.LoginPageTest@71d44a3]" started-at="2023-08-08T19:25:15 WAT" name="tearDown" finished-at="2023-08-08T19:25:15 WAT" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.Automedsys.testcases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
