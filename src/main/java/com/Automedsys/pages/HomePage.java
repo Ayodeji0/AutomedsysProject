@@ -3,10 +3,15 @@
  */
 package com.Automedsys.pages;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Automedsys.base.BaseClass;
 
@@ -16,17 +21,19 @@ import com.Automedsys.base.BaseClass;
   * Date: 2023
  */
 public class HomePage extends BaseClass {
- @FindBy(xpath="//span[contains(text(),'Patients')]")
- WebElement patientbtn;
- 
- 
- public HomePage(WebDriver driver) {
-	 this.driver = driver;
-	 PageFactory.initElements(driver, this);
- }
- 
- public PatientManagementPage addpatientbtn() {
-	 patientbtn.click();
-	 return new PatientManagementPage();
- }
+    @FindBy(xpath = "//img[@alt='patient']")
+    WebElement patientbtn;
+
+    public HomePage(WebDriver driver) { 
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    public PatientManagementPage addpatientbtn() {
+        // Wait for the button to be clickable
+    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(patientbtn));
+        patientbtn.click();
+        return new PatientManagementPage();
+    }
 }

@@ -24,6 +24,7 @@ public class HomePageTest extends BaseClass {
 		homepage.addpatientbtn();
 		String actualUrl = driver.getCurrentUrl();
 		String expectedUrl = "https://dev-ehrpm.automedsys.net/patient";
+		System.out.println(driver.getCurrentUrl());
 		Assert.assertEquals(actualUrl, expectedUrl);
 	}
 	

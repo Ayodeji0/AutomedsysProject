@@ -25,7 +25,7 @@ public class LoginPage extends BaseClass {
 	WebElement practiceId;
 	@FindBy(xpath = "//span[@class='MuiButton-label']")
 	WebElement loginBtn;
-	@FindBy(xpath = "//img[@alt='Automed'])[3]")
+	@FindBy(xpath = "//body//div[@id='root']//div//div//div//div//div//div//img[2]")
 	WebElement logo;
 
 	public LoginPage(WebDriver driver) {
