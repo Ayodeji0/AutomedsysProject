@@ -3,13 +3,14 @@
  */
 package com.Automedsys.testcases;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 import com.Automedsys.base.BaseClass;
 import com.Automedsys.pages.HomePage;
-import com.Automedsys.pages.PatientManagementPage;
+import com.Automedsys.pages.LoginPage;
+
 
 /**
  * 
@@ -17,7 +18,12 @@ import com.Automedsys.pages.PatientManagementPage;
  */
 public class HomePageTest extends BaseClass {
 	HomePage homepage;
+	LoginPage loginpage;
 
+	@BeforeTest
+	 public void initializeLoginPage() {
+	        loginpage = new LoginPage(driver); // Initialize the HomePage object
+	    }
 	@Test
 	public void addpatientbtn() throws InterruptedException {
 		homepage = loginpage.Login("deji@automedsys.com", "P@rfect2", "aal20201001");

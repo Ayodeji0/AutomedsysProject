@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Automedsys.testcases.HomePageTest">
+      <class name="com.Automedsys.testcases.LoginPageTest">
         <methods>
-          <include name="addpatientbtn"/>
+          <include name="verifyLogo"/>
           <include name="tearDown"/>
+          <include name="Login"/>
+          <include name="test1"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.Automedsys.testcases.HomePageTest -->
+      </class> <!-- com.Automedsys.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

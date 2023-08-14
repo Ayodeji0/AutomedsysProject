@@ -4,7 +4,7 @@
 package com.Automedsys.pages;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,8 +31,10 @@ public class HomePage extends BaseClass {
 
     public PatientManagementPage addpatientbtn() {
         // Wait for the button to be clickable
-    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(patientbtn));
+//        String pageSource = driver.getPageSource();
+//        System.out.println(pageSource);
         patientbtn.click();
         return new PatientManagementPage();
     }
